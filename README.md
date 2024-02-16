@@ -1,4 +1,4 @@
-**Sobre o projeto**
+#**Sobre o projeto**
 
 O projeto foi baseado no 2º módulo da trilha ReactJS do Ignite da RocketSeat.
 Consiste em um sistema de controle financeiro. Nela você pode registrar transações com categorias, ter o controle das entradas e saídas e fazer filtros.
