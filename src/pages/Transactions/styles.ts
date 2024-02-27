@@ -26,7 +26,7 @@ export const TransactionsTable = styled.table`
   }
 `;
 
-interface PriceHighlightProps {
+export interface PriceHighlightProps {
   $variant: "income" | "outcome";
 }
 
