@@ -9,16 +9,20 @@ interface Transaction {
   createdAt: string;
 }
 
+
 interface TransactionContextType {
-  transactions: Transaction[]
+  transactions: Transaction[],
 }
 interface TransactionsProviderProps {
   children: ReactNode; // qualquer elemento/component/text/numero válido no react
 }
+
 export const TransactionContext = createContext({} as TransactionContextType)
 
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([])
+
+
 
   async function loadTransactions() {
     const response = await fetch('http://localhost:3333/transactions')

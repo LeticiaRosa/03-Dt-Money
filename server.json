@@ -13,8 +13,16 @@
       "description": "Hambúrguer",
       "type": "outcome",
       "category": "Alimentação",
-      "price": 50,
+      "price": 500,
       "createdAt": "2022-07-29T19:30:44.505Z"
+    },
+    {
+      "id": 3,
+      "description": "Ensaio Fotrográfico",
+      "type": "income",
+      "category": "Venda",
+      "price": 150,
+      "createdAt": "2022-07-29T19:36:44.505Z"
     }
   ]
 }
