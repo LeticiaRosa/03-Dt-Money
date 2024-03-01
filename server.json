@@ -31,6 +31,22 @@
       "category": "Venda",
       "price": 1500,
       "createdAt": "2022-07-29T19:36:44.505Z"
+    },
+    {
+      "category": "Gastos Mensais",
+      "description": "Conta de Luz",
+      "price": 150,
+      "type": "outcome",
+      "createdAt": "2024-03-01T22:29:08.184Z",
+      "id": 5
+    },
+    {
+      "category": "Comida",
+      "description": "Coxinha",
+      "price": 5,
+      "type": "outcome",
+      "createdAt": "2024-03-01T22:50:17.576Z",
+      "id": 6
     }
   ]
 }
