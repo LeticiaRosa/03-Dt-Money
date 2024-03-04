@@ -45,7 +45,7 @@ export function NewTransactionModal() {
       <Content>
         <Dialog.Title>Nova Transação</Dialog.Title>
 
-        <CloseButton>
+        <CloseButton id="close-button-modal">
           <X size={24} />
         </CloseButton>
 

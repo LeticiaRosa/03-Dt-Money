@@ -6,11 +6,22 @@ import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styl
 import { TransactionContext } from "../../contexts/TransactionsContext";
 import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import { useContextSelector } from "use-context-selector";
+import { Trash } from "phosphor-react";
+import { ToastContainer } from "react-toastify";
 
 export function Transactions() {
-  const transactions= useContextSelector(TransactionContext,(context)=>{
+  const  transactions  = useContextSelector(TransactionContext,(context)=>{
     return context.transactions
   })
+
+  const  deleteTransaction = useContextSelector(TransactionContext,(context)=>{
+    return context.deleteTransaction 
+  })
+
+  function handleDeleteTransaction(id:number) {
+    deleteTransaction(id)
+    
+  }
   return (
     <div>
       <Header />
@@ -32,6 +43,7 @@ export function Transactions() {
                   </td>
                   <td>{transaction.category}</td>
                   <td>{dateFormatter.format(new Date(transaction.createdAt))}</td>
+                  <td><button onClick={()=> handleDeleteTransaction(transaction.id)} ><Trash size={20}/></button></td>
                 </tr>
               )
             })}
@@ -40,6 +52,7 @@ export function Transactions() {
           </tbody>
         </TransactionsTable>
       </TransactionsContainer>
+      <ToastContainer />
     </div>
   )
 }
