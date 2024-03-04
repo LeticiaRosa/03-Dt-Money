@@ -20,10 +20,10 @@ talvez você queira pular a tarefa novamente se os dados não tiverem sido alter
 export function useSummary(){
   const transactions = useContextSelector(TransactionContext,(context)=>{
     return context.transactions
-  });
+  }); 
 
   const summary = useMemo(()=>{
-    transactions.reduce((acc, transaction) => {
+    return transactions.reduce((acc, transaction) => {
       if (transaction.type === 'income') {
         acc.income += transaction.price;
         acc.total += transaction.price;
@@ -40,7 +40,7 @@ export function useSummary(){
         total: 0,
       },
     )
-  },[transactions]);
+  },[transactions]) 
 
   return summary
 }

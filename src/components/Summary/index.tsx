@@ -8,6 +8,7 @@ import { useSummary } from "../../hooks/useSummary";
 
 export function Summary() {
   const summary = useSummary();
+  
   return (
     <SummaryContainer>
       <SummaryCard>
